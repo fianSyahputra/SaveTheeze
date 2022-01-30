@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    >
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activityHomePage_addNewWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.9"
+        android:src="@drawable/ic_baseline_add_24"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/activityHomePage_appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/activityHOmePage_appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="SaveTheeze"
+                    app:titleTextColor="@color/white"
+                    app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    app:menu="@menu/activity_homepage_appbarmenu"
+                    />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <TextView
+                android:id="@+id/activityHomePage_welcomeUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintTop_toBottomOf="@id/activityHomePage_appBarLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:text="Hello muhammad alvian syahputra"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:maxLines="1"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/activityHomePage_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/activityHomePage_welcomeUser"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/activityHOmePage_noWordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/activityHomePage_welcomeUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="100dp"
+                android:text="Anda belum menyimpan kata apapun!"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:textColor="#50000000"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

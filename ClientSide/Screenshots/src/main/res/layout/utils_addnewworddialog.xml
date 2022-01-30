@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#60000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.60"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/utilsAddNewWordDialog_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.03"
+            android:gravity="center"
+            android:text="New Word Form"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/utilsAddNewWordDialog_textInputLayout_word"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintTop_toBottomOf="@id/utilsAddNewWordDialog_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.15"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:hint="Word"
+            app:endIconMode="clear_text"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/utilsAddNewWordDialog_textInputEditText_word"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="hello"
+                android:textSize="20dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/utilsAddNewWordDialog_textInputLayout_translate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintTop_toBottomOf="@id/utilsAddNewWordDialog_textInputLayout_word"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            android:hint="Translate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="clear_text"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/utilsAddNewWordDialog_textInputEditText_translate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hallo"
+                android:textSize="20dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/utilsAddNewWordDialog_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/utilsAddNewWordDialog_textInputLayout_translate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            android:text="cancel"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            />
+
+        <Button
+            android:id="@+id/utilsAddNewWordDialog_btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/utilsAddNewWordDialog_textInputLayout_translate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            android:text="Add"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
